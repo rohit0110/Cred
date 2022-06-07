@@ -1,4 +1,4 @@
-import 'package:cred/constants.dart';
+import '../../../constants.dart';
 import 'package:flutter/material.dart';
 
 typedef StringCallback = void Function(String val);

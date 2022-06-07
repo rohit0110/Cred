@@ -1,6 +1,6 @@
-import 'package:cred/constants.dart';
-import 'package:cred/pages/permission_page/components/permission_detail.dart';
-import 'package:cred/pages/permission_page/components/permission_header.dart';
+import '../../../constants.dart';
+import './permission_detail.dart';
+import './permission_header.dart';
 import 'package:flutter/material.dart';
 
 class PermissionsCard extends StatelessWidget {

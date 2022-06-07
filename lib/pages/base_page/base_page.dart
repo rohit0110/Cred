@@ -1,5 +1,5 @@
-import 'package:cred/constants.dart';
-import 'package:cred/pages/base_page/inputs/dob_field.dart';
+import '../../constants.dart';
+import './inputs/dob_field.dart';
 import 'package:flutter/material.dart';
 
 class BasePage extends StatefulWidget {
