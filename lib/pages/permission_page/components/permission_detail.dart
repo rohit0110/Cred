@@ -1,4 +1,4 @@
-import '../../../constants.dart';
+import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class PermissionDetails extends StatelessWidget {

@@ -1,4 +1,4 @@
-import '../../constants.dart';
+import '../../utils/constants.dart';
 import '../common_components/outer_button.dart';
 import './components/permission_card.dart';
 import 'package:flutter/gestures.dart';

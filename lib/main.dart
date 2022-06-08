@@ -1,4 +1,5 @@
-import 'package:cred/pages/base_page/base_page.dart';
+import './pages/base_page/base_page.dart';
+import 'pages/permission_page/permission_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BasePage(),
+      home: const PermissionsPage(),
     );
   }
 }

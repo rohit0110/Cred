@@ -1,4 +1,4 @@
-import '../../../constants.dart';
+import '../../../utils/constants.dart';
 import './permission_detail.dart';
 import './permission_header.dart';
 import 'package:flutter/material.dart';
