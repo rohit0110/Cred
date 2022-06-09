@@ -1,3 +1,4 @@
+import 'package:cred/pages/welcome_page/welcome_page.dart';
 import './pages/base_page/base_page.dart';
 import 'pages/permission_page/permission_page.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PermissionsPage(),
+      home: const WelcomePage(),
     );
   }
 }
