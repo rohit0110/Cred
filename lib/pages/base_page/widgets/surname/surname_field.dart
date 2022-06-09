@@ -61,7 +61,6 @@ class _SurnameContainerState extends State<SurnameContainer> {
                 widget.callback(value);
               });
             },
-            maxLength: 10,
             cursorHeight: 30,
             style: const TextStyle(
               color: Colors.white,

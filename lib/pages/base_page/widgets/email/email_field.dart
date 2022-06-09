@@ -61,7 +61,6 @@ class _EmailContainerState extends State<EmailContainer> {
                 widget.callback(value);
               });
             },
-            maxLength: 10,
             cursorHeight: 30,
             style: const TextStyle(
               color: Colors.white,

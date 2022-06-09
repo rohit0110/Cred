@@ -43,7 +43,6 @@ class _FirstNameContainerState extends State<FirstNameContainer> {
                 widget.callback(value);
               });
             },
-            maxLength: 10,
             cursorHeight: 30,
             style: const TextStyle(
               color: Colors.white,

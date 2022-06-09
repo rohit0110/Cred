@@ -1,3 +1,6 @@
+import 'package:cred/pages/base_page/widgets/otp/otp_bottom_part.dart';
+import 'package:cred/pages/base_page/widgets/otp/otp_field.dart';
+
 import 'widgets/email/email_bottom_part.dart';
 import 'widgets/email/email_field.dart';
 import 'widgets/phone_number/phone_number_bottom_part.dart';
@@ -23,6 +26,7 @@ class _BasePageState extends State<BasePage> {
   bool firstNameEntered = false;
   bool lastNameEntered = false;
   bool phoneNumberEntered = false;
+  String phoneNumber = "";
   bool emailEntered = false;
 
   int selectedIndex = 0;
@@ -71,8 +75,19 @@ class _BasePageState extends State<BasePage> {
                       () {
                         if (value.length == 10) {
                           phoneNumberEntered = true;
+                          phoneNumber = value;
                         } else {
                           phoneNumberEntered = false;
+                        }
+                      },
+                    ),
+                  ),
+                  OtpContainer(
+                    phoneNumber: phoneNumber,
+                    callback: (value) => setState(
+                      () {
+                        if (value.length == 4) {
+                          _onItemTapped(selectedIndex + 1);
                         }
                       },
                     ),
@@ -154,28 +169,29 @@ class _BasePageState extends State<BasePage> {
                         selectedIndex + 1,
                       ),
                     ),
-                  if (selectedIndex == 1)
+                  if (selectedIndex == 1) const OtpBottomPart(),
+                  if (selectedIndex == 2)
                     FirstNameBottomPart(
                       firstNameEntered: firstNameEntered,
                       callback: (val) => _onItemTapped(
                         selectedIndex + 1,
                       ),
                     ),
-                  if (selectedIndex == 2)
+                  if (selectedIndex == 3)
                     SurnameBottomPart(
                       lastNameEntered: lastNameEntered,
                       callback: (val) => _onItemTapped(
                         selectedIndex + 1,
                       ),
                     ),
-                  if (selectedIndex == 3)
+                  if (selectedIndex == 4)
                     EmailBottomPart(
                       emailEntered: emailEntered,
                       callback: (val) => _onItemTapped(
                         selectedIndex + 1,
                       ),
                     ),
-                  if (selectedIndex == 4)
+                  if (selectedIndex == 5)
                     DobBottomPart(
                       dobEntered: dobEntered,
                       callback: (val) => _onItemTapped(
