@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
 class PageIndicator extends StatefulWidget {
-  final index;
-  const PageIndicator({ Key? key, this.index }) : super(key: key);
+  final PageController controller;
+  const PageIndicator({ Key? key, required this.controller}) : super(key: key);
 
   @override
   State<PageIndicator> createState() => _PageIndicatorState();
@@ -15,38 +16,20 @@ class _PageIndicatorState extends State<PageIndicator> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 10),
-      height: 8,
-      width: 74,
-      child: Row(
-        children: [
-          widget.index == 0 ? _selectedWid(): _unselectedWid(),
-          const SizedBox(width: 5,),
-          widget.index == 1 ? _selectedWid(): _unselectedWid(),
-          const SizedBox(width: 5,),
-          widget.index == 2 ? _selectedWid(): _unselectedWid(),
-        ],
+      child: SmoothPageIndicator(
+        controller: widget.controller,
+        count: 3,
+        effect: const ExpandingDotsEffect(
+          spacing: 8.0,
+          radius: 0.0,
+          dotWidth: 6.0,
+          dotHeight: 6.0,
+          paintStyle: PaintingStyle.fill,
+          strokeWidth: 1.5,
+          dotColor:Colors.grey,
+          activeDotColor: Colors.grey,
+        ),
       ),
     );
   }
-
-  Widget _selectedWid() {
-    return Container(
-      height: 5,
-      width: 30,
-      decoration: BoxDecoration(
-      border: Border.all(color: Colors.grey, width: 1),
-      ),
-    );
-  }
-
-  Widget _unselectedWid() {
-    return Container(
-      height: 5,
-      width: 5,
-      decoration: const BoxDecoration(
-      color: Colors.grey,
-      ),
-    );
-  }
-
 }

@@ -1,8 +1,6 @@
-import 'package:cred/pages/common_components/outer_button.dart';
-import 'package:cred/pages/welcome_page/utils/page_indicator.dart';
-import 'package:cred/pages/welcome_page/utils/welcome_card_1.dart';
-import 'package:cred/pages/welcome_page/utils/welcome_card_2.dart';
-import 'package:cred/pages/welcome_page/utils/welcome_card_3.dart';
+import '../common_components/outer_button.dart';
+import '././utils/page_indicator.dart';
+import '././utils/welcome_card.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,6 +15,10 @@ class _WelcomePageState extends State<WelcomePage> {
 
   PageController pagecontroller = PageController(initialPage: 0);
   int pagenum = 0;
+
+  List<String> cardDetails1 = ["pay bills", "get rewarded", "earn assured cashbacks and rewards every time you pay a credit card bill", "images/welcome_pic_1.jpg"];
+  List<String> cardDetails2 = ["unlock special offers", "on tap brands", "use CRED coins for claiming member only discounts", "images/welcome_pic_2.jpg"];
+  List<String> cardDetails3 = ["say goodbye to", "late fees", "never miss a due date with timely payment reminders on WhatsApp", "images/welcome_pic_3.jpg"];
 
   @override
   Widget build(BuildContext context) {
@@ -37,15 +39,15 @@ class _WelcomePageState extends State<WelcomePage> {
                     pagenum = index;
                   });
                 },
-                children: const [
-                  WelcomeCard1(),
-                  WelcomeCard2(),
-                  WelcomeCard3(),
+                children: [
+                  WelcomeCard(cardDetails: cardDetails1),
+                  WelcomeCard(cardDetails: cardDetails2),
+                  WelcomeCard(cardDetails: cardDetails3),
                 ],
               ),
             ),
             const SizedBox(height: 15,),
-            PageIndicator(index: pagenum,),
+            PageIndicator(controller: pagecontroller),
             const SizedBox(height: 35,),
             const OuterButton(disabled: false),
           ],
