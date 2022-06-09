@@ -13,8 +13,8 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
 
-  PageController pagecontroller = PageController(initialPage: 0);
-  int pagenum = 0;
+  PageController pageController = PageController(initialPage: 0);
+  int pageNum = 0;
 
   List<String> cardDetails1 = ["pay bills", "get rewarded", "earn assured cashbacks and rewards every time you pay a credit card bill", "images/welcome_pic_1.jpg"];
   List<String> cardDetails2 = ["unlock special offers", "on tap brands", "use CRED coins for claiming member only discounts", "images/welcome_pic_2.jpg"];
@@ -33,10 +33,10 @@ class _WelcomePageState extends State<WelcomePage> {
             SizedBox(
               height: 330,
               child: PageView(
-                controller: pagecontroller,
+                controller: pageController,
                 onPageChanged: (index){
                   setState(() {
-                    pagenum = index;
+                    pageNum = index;
                   });
                 },
                 children: [
@@ -47,7 +47,7 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
             ),
             const SizedBox(height: 15,),
-            PageIndicator(controller: pagecontroller),
+            PageIndicator(controller: pageController),
             const SizedBox(height: 35,),
             const OuterButton(disabled: false),
           ],
