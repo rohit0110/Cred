@@ -1,3 +1,7 @@
+import 'widgets/email/email_bottom_part.dart';
+import 'widgets/email/email_field.dart';
+import 'widgets/phone_number/phone_number_bottom_part.dart';
+import 'widgets/phone_number/phone_number_field.dart';
 import 'widgets/dob/dob_bottom_part.dart';
 import 'widgets/first_name/first_name_bottom_part.dart';
 import 'widgets/first_name/first_name_field.dart';
@@ -18,6 +22,8 @@ class _BasePageState extends State<BasePage> {
   bool dobEntered = false;
   bool firstNameEntered = false;
   bool lastNameEntered = false;
+  bool phoneNumberEntered = false;
+  bool emailEntered = false;
 
   int selectedIndex = 0;
   PageController pageController = PageController();
@@ -60,6 +66,17 @@ class _BasePageState extends State<BasePage> {
                   );
                 },
                 children: [
+                  PhoneNumberContainer(
+                    callback: (value) => setState(
+                      () {
+                        if (value.length == 10) {
+                          phoneNumberEntered = true;
+                        } else {
+                          phoneNumberEntered = false;
+                        }
+                      },
+                    ),
+                  ),
                   FirstNameContainer(
                     callback: (value) => setState(
                       () {
@@ -85,6 +102,23 @@ class _BasePageState extends State<BasePage> {
                         },
                       );
                     }
+                  }),
+                  EmailContainer(callback: (value) {
+                    setState(() {
+                      if (value == "-1") {
+                        _onItemTapped(selectedIndex - 1);
+                      } else {
+                        setState(
+                          () {
+                            if (value.isEmpty) {
+                              emailEntered = false;
+                            } else {
+                              emailEntered = true;
+                            }
+                          },
+                        );
+                      }
+                    });
                   }),
                   DOBContainer(
                     callback: (value) => setState(
@@ -114,20 +148,34 @@ class _BasePageState extends State<BasePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (selectedIndex == 0)
+                    PhoneNumberBottomPart(
+                      phoneNumberEntered: phoneNumberEntered,
+                      callback: (val) => _onItemTapped(
+                        selectedIndex + 1,
+                      ),
+                    ),
+                  if (selectedIndex == 1)
                     FirstNameBottomPart(
                       firstNameEntered: firstNameEntered,
                       callback: (val) => _onItemTapped(
                         selectedIndex + 1,
                       ),
                     ),
-                  if (selectedIndex == 1)
+                  if (selectedIndex == 2)
                     SurnameBottomPart(
                       lastNameEntered: lastNameEntered,
                       callback: (val) => _onItemTapped(
                         selectedIndex + 1,
                       ),
                     ),
-                  if (selectedIndex == 2)
+                  if (selectedIndex == 3)
+                    EmailBottomPart(
+                      emailEntered: emailEntered,
+                      callback: (val) => _onItemTapped(
+                        selectedIndex + 1,
+                      ),
+                    ),
+                  if (selectedIndex == 4)
                     DobBottomPart(
                       dobEntered: dobEntered,
                       callback: (val) => _onItemTapped(
