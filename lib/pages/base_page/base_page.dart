@@ -1,6 +1,7 @@
-import 'package:cred/pages/base_page/widgets/otp/otp_bottom_part.dart';
-import 'package:cred/pages/base_page/widgets/otp/otp_field.dart';
+import 'package:cred/pages/permission_page/permission_page.dart';
 
+import 'widgets/otp/otp_bottom_part.dart';
+import 'widgets/otp/otp_field.dart';
 import 'widgets/email/email_bottom_part.dart';
 import 'widgets/email/email_field.dart';
 import 'widgets/phone_number/phone_number_bottom_part.dart';
@@ -22,15 +23,15 @@ class BasePage extends StatefulWidget {
 }
 
 class _BasePageState extends State<BasePage> {
-  bool dobEntered = false;
+  String phoneNumber = "";
+  bool phoneNumberEntered = false;
   bool firstNameEntered = false;
   bool lastNameEntered = false;
-  bool phoneNumberEntered = false;
-  String phoneNumber = "";
   bool emailEntered = false;
-
+  bool dobEntered = false;
   int selectedIndex = 0;
   PageController pageController = PageController();
+
   void _onItemTapped(int index) {
     setState(
       () {
@@ -165,9 +166,15 @@ class _BasePageState extends State<BasePage> {
                   if (selectedIndex == 0)
                     PhoneNumberBottomPart(
                       phoneNumberEntered: phoneNumberEntered,
-                      callback: (val) => _onItemTapped(
-                        selectedIndex + 1,
-                      ),
+                      callback: (val) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PermissionsPage(),
+                          ),
+                        );
+                        _onItemTapped(selectedIndex + 1);
+                      },
                     ),
                   if (selectedIndex == 1) const OtpBottomPart(),
                   if (selectedIndex == 2)
