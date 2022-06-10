@@ -11,15 +11,6 @@ class _LoadingEffectState extends State<LoadingEffect> with TickerProviderStateM
   
   late AnimationController _controller;
   
-  // @override
-  // void initState() {
-  //   _controller = AnimationController(
-  //     duration: const Duration(milliseconds: 70),
-  //     vsync: this);
-  //   super.initState();
-  // }
-  
-  
   @override
   Widget build(BuildContext context) {
     return const CircularProgressIndicator(
