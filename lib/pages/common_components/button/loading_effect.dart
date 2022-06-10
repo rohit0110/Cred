@@ -9,8 +9,6 @@ class LoadingEffect extends StatefulWidget {
 
 class _LoadingEffectState extends State<LoadingEffect> with TickerProviderStateMixin {
   
-  late AnimationController _controller;
-  
   @override
   Widget build(BuildContext context) {
     return const CircularProgressIndicator(
