@@ -140,41 +140,30 @@ class _CustomButtonState extends State<CustomButton> {
   void getValues(){
 
     if(widget.buttonSize == ButtonSize.small){
-      setState(() {
         buttonWidth = 204;
-      });
     }
 
     if(widget.buttonSize == ButtonSize.medium){
-      setState(() {
         buttonWidth = 255;
-      });
     }
 
     if(widget.buttonSize == ButtonSize.large){
-      setState(() {
         buttonWidth = MediaQuery.of(context).size.width*0.9;
-      });
     }
 
     if(widget.buttonState == ButtonState.enabled){
-      setState(() {
         mainColor = Colors.white;
         rightColor = const Color.fromRGBO(216, 216, 216, 1);
         bottomColor = const Color.fromRGBO(216, 216, 216, 1);
-      });
     }
     if(widget.buttonState == ButtonState.disabled){
-      setState(() {
         mainColor = Colors.grey;
         rightColor = const Color.fromRGBO(211, 211, 211, 1);
         bottomColor = const Color.fromRGBO(88, 88, 88, 1);
-      });
     }
 
     if(widget.buttonActivity == ButtonActivity.initial){
       if(widget.buttonState == ButtonState.disabled){
-        setState(() {
           centerWidget = Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -183,10 +172,8 @@ class _CustomButtonState extends State<CustomButton> {
             const Icon(Icons.arrow_forward, color: Colors.white,),
           ],
         );
-        });
       }
       if(widget.buttonState == ButtonState.enabled){
-        setState(() {
           centerWidget = Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -195,13 +182,10 @@ class _CustomButtonState extends State<CustomButton> {
             const Icon(Icons.arrow_forward, color: Colors.black,),
           ],
         );
-        });
       }
     }
     else if(widget.buttonActivity == ButtonActivity.loading){
-      setState(() {
         centerWidget = const LoadingEffect();
-      });
     }
     }
 }
