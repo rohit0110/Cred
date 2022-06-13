@@ -69,7 +69,7 @@ class _OtpContainerState extends State<OtpContainer> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            keyboardType: TextInputType.name,
+            keyboardType: TextInputType.phone,
           ),
         ],
       ),

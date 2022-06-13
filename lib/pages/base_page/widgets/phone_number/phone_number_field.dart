@@ -65,7 +65,7 @@ class _PhoneNumberContainerState extends State<PhoneNumberContainer> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            keyboardType: TextInputType.name,
+            keyboardType: TextInputType.phone,
           ),
         ],
       ),
