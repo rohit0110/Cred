@@ -1,3 +1,5 @@
+import '../../../../pages/common_components/button/custom_button.dart';
+
 import '../../../../utils/constants.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +23,19 @@ class _SurnameBottomPartState extends State<SurnameBottomPart> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          activityButton(),
+          CustomButton(
+            buttonSize: ButtonSize.small,
+            buttonActivity: ButtonActivity.initial,
+            buttonState: widget.lastNameEntered
+                ? ButtonState.enabled
+                : ButtonState.disabled,
+            title: "Continue",
+            callback: (val) {
+              setState(() {
+                widget.callback(val);
+              });
+            },
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -77,54 +91,6 @@ class _SurnameBottomPartState extends State<SurnameBottomPart> {
             ],
           ),
         ],
-      ),
-    );
-  }
-
-  Widget activityButton() {
-    return Container(
-      decoration: BoxDecoration(
-        color: (widget.lastNameEntered) ? Colors.white : Colors.grey,
-        border: Border(
-          right: BorderSide(
-            width: 3,
-            color: (widget.lastNameEntered) ? Colors.grey : Colors.white,
-          ),
-          bottom: BorderSide(
-            width: 3,
-            color: (widget.lastNameEntered)
-                ? Colors.grey
-                : const Color.fromARGB(255, 42, 40, 40),
-          ),
-        ),
-      ),
-      width: 150,
-      height: 50,
-      child: InkWell(
-        onTap: () {
-          if (widget.lastNameEntered) {
-            setState(() {
-              widget.callback("1");
-            });
-          }
-        },
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Continue",
-              style: TextStyle(
-                color: (widget.lastNameEntered) ? Colors.black : Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Icon(
-              Icons.arrow_right_alt_rounded,
-              color: (widget.lastNameEntered) ? Colors.black : Colors.white,
-            ),
-          ],
-        ),
       ),
     );
   }

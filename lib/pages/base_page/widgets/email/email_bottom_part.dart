@@ -1,3 +1,4 @@
+import '../../../../pages/common_components/button/custom_button.dart';
 import '../../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -83,61 +84,20 @@ class _EmailBottomPartState extends State<EmailBottomPart> {
           const SizedBox(
             height: 30,
           ),
-          activityButton(),
+          CustomButton(
+            buttonSize: ButtonSize.large,
+            buttonActivity: ButtonActivity.initial,
+            buttonState: widget.emailEntered && isChecked
+                ? ButtonState.enabled
+                : ButtonState.disabled,
+            title: "Continue",
+            callback: (val) {
+              setState(() {
+                widget.callback(val);
+              });
+            },
+          ),
         ],
-      ),
-    );
-  }
-
-  Widget activityButton() {
-    return Container(
-      decoration: BoxDecoration(
-        color: (widget.emailEntered && isChecked) ? Colors.white : Colors.grey,
-        border: Border(
-          right: BorderSide(
-            width: 3,
-            color:
-                (widget.emailEntered && isChecked) ? Colors.grey : Colors.white,
-          ),
-          bottom: BorderSide(
-            width: 3,
-            color: (widget.emailEntered && isChecked)
-                ? Colors.grey
-                : const Color.fromARGB(255, 42, 40, 40),
-          ),
-        ),
-      ),
-      width: 150,
-      height: 50,
-      child: InkWell(
-        onTap: () {
-          if (widget.emailEntered && isChecked) {
-            setState(() {
-              widget.callback("1");
-            });
-          }
-        },
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Temp",
-              style: TextStyle(
-                color: (widget.emailEntered && isChecked)
-                    ? Colors.black
-                    : Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Icon(
-              Icons.arrow_right_alt_rounded,
-              color: (widget.emailEntered && isChecked)
-                  ? Colors.black
-                  : Colors.white,
-            ),
-          ],
-        ),
       ),
     );
   }
