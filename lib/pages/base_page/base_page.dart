@@ -1,5 +1,6 @@
-import 'package:cred/pages/permission_page/permission_page.dart';
-
+import './widgets/pan/pan_bottom_part.dart';
+import './widgets/pan/pan_field.dart';
+import '../permission_page/permission_page.dart';
 import 'widgets/otp/otp_bottom_part.dart';
 import 'widgets/otp/otp_field.dart';
 import 'widgets/email/email_bottom_part.dart';
@@ -29,6 +30,7 @@ class _BasePageState extends State<BasePage> {
   bool lastNameEntered = false;
   bool emailEntered = false;
   bool dobEntered = false;
+  bool panEntered = false;
   int selectedIndex = 0;
   PageController pageController = PageController();
 
@@ -147,6 +149,17 @@ class _BasePageState extends State<BasePage> {
                       },
                     ),
                   ),
+                  PanContainer(
+                    callback: (value) => setState(
+                      () {
+                        if (value.length == 10) {
+                          panEntered = true;
+                        } else {
+                          panEntered = false;
+                        }
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -205,6 +218,8 @@ class _BasePageState extends State<BasePage> {
                         selectedIndex + 1,
                       ),
                     ),
+                  if (selectedIndex == 6)
+                    PanBottomPart(panEntered: panEntered, callback: (val) {}),
                 ],
               ),
             ),
