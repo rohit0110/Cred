@@ -9,6 +9,7 @@ class DOBContainer extends StatefulWidget {
 }
 
 class _DOBContainerState extends State<DOBContainer> {
+  final TextEditingController _dobController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,7 +38,20 @@ class _DOBContainerState extends State<DOBContainer> {
           ),
           const SizedBox(height: 20),
           TextField(
+            controller: _dobController,
             onChanged: (value) {
+              if (value.length == 3 || value.length == 6) {
+                if (value[value.length - 1] == "/") {
+                  value = value.substring(0, value.length - 1);
+                } else {
+                  value = value.substring(0, value.length - 1) +
+                      "/" +
+                      value[value.length - 1];
+                }
+                _dobController.value = TextEditingValue(
+                    text: value,
+                    selection: TextSelection.collapsed(offset: value.length));
+              }
               setState(() {
                 widget.callback(value);
               });
