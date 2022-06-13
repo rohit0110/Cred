@@ -1,3 +1,4 @@
+import '../base_page/base_page.dart';
 import '../common_components/button/custom_button.dart';
 import '././utils/page_indicator.dart';
 import '././utils/welcome_card.dart';
@@ -36,39 +37,47 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
-        body: Padding(
-          padding: const EdgeInsets.fromLTRB(15, 33, 15, 15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              SizedBox(
-                height: 330,
-                child: PageView(
-                  controller: pageController,
-                  onPageChanged: (index) {
-                    setState(() {
-                      pageNum = index;
-                    });
-                  },
-                  children: [
-                    WelcomeCard(cardDetails: cardDetails1),
-                    WelcomeCard(cardDetails: cardDetails2),
-                    WelcomeCard(cardDetails: cardDetails3),
-                  ],
-                ),
+      backgroundColor: Colors.black,
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(15, 33, 15, 15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            SizedBox(
+              height: 330,
+              child: PageView(
+                controller: pageController,
+                onPageChanged: (index) {
+                  setState(() {
+                    pageNum = index;
+                  });
+                },
+                children: [
+                  WelcomeCard(cardDetails: cardDetails1),
+                  WelcomeCard(cardDetails: cardDetails2),
+                  WelcomeCard(cardDetails: cardDetails3),
+                ],
               ),
-              const SizedBox(
-                height: 15,
-              ),
-              PageIndicator(controller: pageController),
-              const SizedBox(
-                height: 35,
-              ),
-              //Use custom button
-            ],
-          ),
-        ));
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            PageIndicator(controller: pageController),
+            const SizedBox(
+              height: 35,
+            ),
+            //Use custom button
+            const CustomButton(
+              buttonSize: ButtonSize.large,
+              buttonActivity: ButtonActivity.initial,
+              buttonState: ButtonState.enabled,
+              title: "Become a member",
+              route: BasePage(),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
