@@ -6,62 +6,65 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Icon(
-          Icons.keyboard_backspace_sharp,
-          color: Colors.white,
-          size: 40,
-        ),
-        Row(
-          children: [
-            ElevatedButton(
-              onPressed: () {},
-              child: const Icon(Icons.notifications_outlined),
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all(
-                  const CircleBorder(),
-                ),
-                padding: MaterialStateProperty.all(
-                  const EdgeInsets.all(padding - 6),
-                ),
-                backgroundColor: MaterialStateProperty.all(primaryColor),
-              ),
-            ),
-            const SizedBox(
-              width: padding / 3,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(padding * 2),
+    return Padding(
+      padding: const EdgeInsets.all(padding),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Icon(
+            Icons.keyboard_backspace_sharp,
+            color: Colors.white,
+            size: 40,
+          ),
+          Row(
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                child: const Icon(Icons.notifications_outlined),
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    const CircleBorder(),
                   ),
-                ),
-                backgroundColor: MaterialStateProperty.all(primaryColor),
-                padding: MaterialStateProperty.all(
-                  const EdgeInsets.all(padding - 6),
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.all(padding - 6),
+                  ),
+                  backgroundColor: MaterialStateProperty.all(primaryColor),
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Icon(
-                    Icons.settings_outlined,
-                    color: Colors.white,
-                  ),
-                  Text(
-                    "Settings",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
+              const SizedBox(
+                width: padding / 3,
               ),
-            ),
-          ],
-        )
-      ],
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(padding * 2),
+                    ),
+                  ),
+                  backgroundColor: MaterialStateProperty.all(primaryColor),
+                  padding: MaterialStateProperty.all(
+                    const EdgeInsets.all(padding - 6),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Icon(
+                      Icons.settings_outlined,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      "Settings",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
