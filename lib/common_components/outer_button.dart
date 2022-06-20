@@ -26,7 +26,9 @@ class OuterButton extends StatelessWidget {
       width: 150,
       height: 50,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.pop(context);
+        },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
