@@ -1,3 +1,5 @@
+import 'package:cred/pages/profile_page/profile_page.dart';
+
 import 'pages/welcome_page/welcome_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomePage(),
+      home: const ProfilePage(),
     );
   }
 }

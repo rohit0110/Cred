@@ -1,0 +1,67 @@
+import 'package:cred/utils/constants.dart';
+import 'package:flutter/material.dart';
+
+class Header extends StatelessWidget {
+  const Header({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        const Icon(
+          Icons.keyboard_backspace_sharp,
+          color: Colors.white,
+          size: 40,
+        ),
+        Row(
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              child: const Icon(Icons.notifications_outlined),
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all(
+                  const CircleBorder(),
+                ),
+                padding: MaterialStateProperty.all(
+                  const EdgeInsets.all(padding - 6),
+                ),
+                backgroundColor: MaterialStateProperty.all(primaryColor),
+              ),
+            ),
+            const SizedBox(
+              width: padding / 3,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(padding * 2),
+                  ),
+                ),
+                backgroundColor: MaterialStateProperty.all(primaryColor),
+                padding: MaterialStateProperty.all(
+                  const EdgeInsets.all(padding - 6),
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Icon(
+                    Icons.settings_outlined,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "Settings",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        )
+      ],
+    );
+  }
+}
