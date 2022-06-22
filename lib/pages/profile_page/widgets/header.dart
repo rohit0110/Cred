@@ -1,3 +1,5 @@
+import 'package:cred/pages/settings/settings_bottom_sheet.dart';
+
 import '../../notifications_page/notifications_page.dart';
 import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +45,15 @@ class Header extends StatelessWidget {
                 width: padding / 3,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    builder: (context) {
+                      return const SettingsBottomSheet();
+                    },
+                  );
+                },
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
