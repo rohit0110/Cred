@@ -1,9 +1,9 @@
-import 'package:cred/pages/credit_score_page/credit_score_page.dart';
-import 'package:cred/pages/profile_page/widgets/bottom_card.dart';
-import 'package:cred/pages/profile_page/widgets/cred_collectibles.dart';
-import 'package:cred/pages/profile_page/widgets/header.dart';
-import 'package:cred/pages/profile_page/widgets/profile_picture.dart';
-import 'package:cred/utils/constants.dart';
+import '../credit_score_page/credit_score_page.dart';
+import './widgets/bottom_card.dart';
+import './widgets/cred_collectibles.dart';
+import './widgets/header.dart';
+import './widgets/profile_picture.dart';
+import '../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {

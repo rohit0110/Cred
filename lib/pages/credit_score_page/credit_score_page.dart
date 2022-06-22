@@ -1,9 +1,9 @@
-import 'package:cred/common_components/header.dart';
-import 'package:cred/pages/credit_score_page/widgets/credit_insights.dart';
-import 'package:cred/pages/credit_score_page/widgets/credit_score_card.dart';
-import 'package:cred/pages/credit_score_page/widgets/learn_more.dart';
-import 'package:cred/pages/credit_score_page/widgets/refresh_card.dart';
-import 'package:cred/utils/constants.dart';
+import '../../common_components/header.dart';
+import './widgets/credit_insights.dart';
+import './widgets/credit_score_card.dart';
+import './widgets/learn_more.dart';
+import './widgets/refresh_card.dart';
+import '../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CreditScorePage extends StatelessWidget {

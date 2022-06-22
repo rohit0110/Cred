@@ -1,6 +1,6 @@
-import 'package:cred/pages/notifications_page/widgets/header.dart';
-import 'package:cred/pages/notifications_page/widgets/notification_card.dart';
-import 'package:cred/utils/constants.dart';
+import './widgets/header.dart';
+import './widgets/notification_card.dart';
+import '../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsPage extends StatefulWidget {

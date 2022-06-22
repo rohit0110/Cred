@@ -1,5 +1,5 @@
-import 'package:cred/pages/credit_score_page/widgets/insight_card.dart';
-import 'package:cred/utils/constants.dart';
+import './insight_card.dart';
+import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CreditInsights extends StatelessWidget {

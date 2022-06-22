@@ -1,5 +1,5 @@
-import 'package:cred/pages/profile_page/widgets/cred_collectible_card.dart';
-import 'package:cred/utils/constants.dart';
+import './cred_collectible_card.dart';
+import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CredCollectibles extends StatefulWidget {

@@ -1,5 +1,5 @@
-import 'package:cred/pages/notifications_page/notifications_page.dart';
-import 'package:cred/utils/constants.dart';
+import '../../notifications_page/notifications_page.dart';
+import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
