@@ -8,8 +8,10 @@ class BottomCard extends StatelessWidget {
     required this.subheading,
     required this.clickableText,
     required this.assetPath,
+    required this.gotoPage,
   }) : super(key: key);
   final String heading, subheading, clickableText, assetPath;
+  final Widget gotoPage;
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +72,12 @@ class BottomCard extends StatelessWidget {
                     ),
                   ),
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => gotoPage),
+                      );
+                    },
                     child: Text(
                       clickableText,
                       style: const TextStyle(

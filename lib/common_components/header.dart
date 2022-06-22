@@ -11,11 +11,16 @@ class CommonHeader extends StatelessWidget {
       padding: const EdgeInsets.all(padding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          Icon(
-            Icons.keyboard_backspace_sharp,
-            color: Colors.white,
-            size: 40,
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Icon(
+              Icons.keyboard_backspace_sharp,
+              color: Colors.white,
+              size: 40,
+            ),
           ),
         ],
       ),

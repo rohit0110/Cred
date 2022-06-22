@@ -1,3 +1,4 @@
+import 'package:cred/pages/credit_score_page/credit_score_page.dart';
 import 'package:cred/pages/profile_page/widgets/bottom_card.dart';
 import 'package:cred/pages/profile_page/widgets/cred_collectibles.dart';
 import 'package:cred/pages/profile_page/widgets/header.dart';
@@ -52,12 +53,14 @@ class ProfilePage extends StatelessWidget {
                       "refresh your credit report to get insights and track your credit standing",
                   clickableText: "View Details",
                   assetPath: "",
+                  gotoPage: CreditScorePage(),
                 ),
                 BottomCard(
                   heading: "refer & earn upto ₹1000",
                   subheading: "earn cashback for bringing your friends to Cred",
                   clickableText: "Win Now",
                   assetPath: "",
+                  gotoPage: CreditScorePage(),
                 ),
               ],
             ),

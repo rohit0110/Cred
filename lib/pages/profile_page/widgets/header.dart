@@ -1,3 +1,4 @@
+import 'package:cred/pages/notifications_page/notifications_page.dart';
 import 'package:cred/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,14 @@ class Header extends StatelessWidget {
           Row(
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: ((context) => const NotificationsPage()),
+                    ),
+                  );
+                },
                 child: const Icon(Icons.notifications_outlined),
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all(

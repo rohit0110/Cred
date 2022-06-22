@@ -1,7 +1,4 @@
-import 'package:cred/pages/credit_score_page/credit_score_page.dart';
 import 'package:cred/pages/profile_page/profile_page.dart';
-// import 'package:cred/pages/profile_page/profile_page.dart';
-// import 'pages/welcome_page/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const CreditScorePage(),
+      home: const ProfilePage(),
     );
   }
 }
