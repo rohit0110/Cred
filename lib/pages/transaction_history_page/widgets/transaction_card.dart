@@ -1,37 +1,20 @@
 import 'package:cred/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-class SettingCard extends StatelessWidget {
-  const SettingCard({
+class TransactionCard extends StatelessWidget {
+  const TransactionCard({
     Key? key,
     required this.heading,
     required this.subheading,
-    required this.gotoPage,
   }) : super(key: key);
 
   final String heading, subheading;
-  final Widget gotoPage;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: ((context) => gotoPage),
-          ),
-        );
-      },
       child: Container(
-        padding: const EdgeInsets.fromLTRB(0, padding, padding, padding),
-        decoration: const BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: subheadingColor,
-            ),
-          ),
-        ),
+        padding: const EdgeInsets.all(padding),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -51,7 +34,7 @@ class SettingCard extends StatelessWidget {
                   Text(
                     heading,
                     style: const TextStyle(
-                      color: Colors.black,
+                      color: headingColor,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
@@ -70,8 +53,8 @@ class SettingCard extends StatelessWidget {
               ),
             ),
             const Icon(
-              Icons.arrow_right_alt,
-              color: Colors.black,
+              Icons.keyboard_arrow_right,
+              color: headingColor,
               size: 30,
             ),
           ],

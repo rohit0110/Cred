@@ -18,7 +18,9 @@ class CreditScorePage extends StatelessWidget {
             color: secondaryColor,
             child: Column(
               children: [
-                const CommonHeader(),
+                const CommonHeader(
+                  title: "",
+                ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.all(padding),
