@@ -129,13 +129,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
                     styledHeading("TAP TO GET NOTIFIED"),
                     const SizedBox(height: 15,),
-                    centeredMainImageWid("images/tap_to_get_notified.png"),
+                    centeredMainImageWid("images/homepage/tap_to_get_notified.png"),
                     const SizedBox(height: 45,),
                     
 
                     styledHeading("NOW LIVE ON CRED TRAVEL"),
                     const SizedBox(height: 15,),
-                    centeredMainImageWid("images/cred_travel.png"),
+                    centeredMainImageWid("images/homepage/cred_travel.png"),
                     const SizedBox(height: 45,),
 
                     
@@ -162,7 +162,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ],
                 ),
               ),
-              const Image(image: AssetImage("images/explore_cred_bottom_pic.png"),),
+              const Image(image: AssetImage("images/homepage/explore_cred_bottom_pic.png"),),
             ],
           ),
         ),
@@ -208,7 +208,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     shape: BoxShape.circle,
                   ),
                   child: const Image(
-                    image: AssetImage("images/dollar.png"),
+                    image: AssetImage("images/homepage/dollar.png"),
                     fit: BoxFit.fill,
                   ),
                 ),

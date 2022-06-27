@@ -19,7 +19,7 @@ class RewardsWidget extends StatelessWidget {
             child: SizedBox(
               height: 50,
               width: 50,
-              child: Image(image: AssetImage("images/cloud.png"),),),
+              child: Image(image: AssetImage("images/homepage/cloud.png"),),),
           ),
           const Positioned(
             bottom: 15,
@@ -27,7 +27,7 @@ class RewardsWidget extends StatelessWidget {
             child: SizedBox(
               height: 50,
               width: 50,
-              child: Image(image: AssetImage("images/cloud.png"),),),
+              child: Image(image: AssetImage("images/homepage/cloud.png"),),),
           ),
           const Positioned(
             right: 20,
@@ -35,7 +35,7 @@ class RewardsWidget extends StatelessWidget {
             child: SizedBox(
               height: 40,
               width: 40,
-              child: Image(image: AssetImage("images/right_turned_coin.png"),),),
+              child: Image(image: AssetImage("images/homepage/right_turned_coin.png"),),),
           ),
           const Positioned(
             left: 35,
@@ -43,7 +43,7 @@ class RewardsWidget extends StatelessWidget {
             child: SizedBox(
               height: 40,
               width: 40,
-              child: Image(image: AssetImage("images/left_turned_coin.png"),),),
+              child: Image(image: AssetImage("images/homepage/left_turned_coin.png"),),),
           ),
           Positioned.fill(
             top: 130,

@@ -11,7 +11,7 @@ class ExcitingOffersOnBrands extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
-          Image(image: AssetImage("images/redeem_cred_coins_earned.png")),
+          Image(image: AssetImage("images/homepage/redeem_cred_coins_earned.png")),
           SizedBox(
             height: 10,
           ),

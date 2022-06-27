@@ -100,7 +100,7 @@ class _UpcomingBillsState extends State<UpcomingBills> {
               child: SizedBox(
                 height: 33,
                 width: 33,
-                child: Image(image: AssetImage("images/upccl.png"), fit: BoxFit.fill,),
+                child: Image(image: AssetImage("images/homepage/upccl.png"), fit: BoxFit.fill,),
               ),
             )
           ],),

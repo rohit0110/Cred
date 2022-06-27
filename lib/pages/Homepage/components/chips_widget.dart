@@ -37,7 +37,7 @@ class ChipsWidget extends StatelessWidget {
               shape: BoxShape.circle,
             ),
             child: const Image(
-              image: AssetImage("images/dollar.png"),
+              image: AssetImage("images/homepage/dollar.png"),
               fit: BoxFit.fill,
             ),
           ),

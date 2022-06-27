@@ -22,7 +22,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                   color: Colors.black,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(60),
-                    child: const Image(image: AssetImage("images/profile_photo.png"), fit: BoxFit.cover,),
+                    child: const Image(image: AssetImage("images/homepage/profile_photo.png"), fit: BoxFit.cover,),
                   ),
                 ),
               ),

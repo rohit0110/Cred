@@ -61,7 +61,7 @@ class ReferAndEarn extends StatelessWidget {
               height: 140,
               width: 100,
               child: Image(
-                image: AssetImage("images/refer_and_earn.png"),
+                image: AssetImage("images/homepage/refer_and_earn.png"),
                 fit: BoxFit.fill,
               ),
             ),

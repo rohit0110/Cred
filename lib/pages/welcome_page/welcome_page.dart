@@ -17,9 +17,9 @@ class _WelcomePageState extends State<WelcomePage> {
   PageController pageController = PageController(initialPage: 0);
   int pageNum = 0;
 
-  List<String> cardDetails1 = ["pay bills", "get rewarded", "earn assured cashbacks and rewards every time you pay a credit card bill", "images/welcome_pic_1.jpg"];
-  List<String> cardDetails2 = ["unlock special offers", "on tap brands", "use CRED coins for claiming member only discounts", "images/welcome_pic_2.jpg"];
-  List<String> cardDetails3 = ["say goodbye to", "late fees", "never miss a due date with timely payment reminders on WhatsApp", "images/welcome_pic_3.jpg"];
+  List<String> cardDetails1 = ["pay bills", "get rewarded", "earn assured cashbacks and rewards every time you pay a credit card bill", "images/welcome_page/welcome_pic_1.jpg"];
+  List<String> cardDetails2 = ["unlock special offers", "on tap brands", "use CRED coins for claiming member only discounts", "images/welcome_page/welcome_pic_2.jpg"];
+  List<String> cardDetails3 = ["say goodbye to", "late fees", "never miss a due date with timely payment reminders on WhatsApp", "images/welcome_page/welcome_pic_3.jpg"];
 
   @override
   Widget build(BuildContext context) {
