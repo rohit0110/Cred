@@ -1,3 +1,4 @@
+import 'package:cred/pages/manage_account_page/manage_account_page.dart';
 import 'package:cred/pages/settings/widgets/setting_card.dart';
 import 'package:cred/pages/transaction_history_page/transaction_history_page.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class SettingsList extends StatelessWidget {
         SettingCard(
           heading: "manage account",
           subheading: "login details and communication preferences",
-          gotoPage: TransactionHisotryPage(),
+          gotoPage: ManageAccountPage(),
         ),
         SettingCard(
           heading: "payment settings",
