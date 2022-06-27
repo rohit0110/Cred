@@ -1,7 +1,7 @@
-import 'package:cred/common_components/header.dart';
-import 'package:cred/pages/manage_account_page/widgets/information_card.dart';
-import 'package:cred/pages/payment_page/widgets/option_card.dart';
-import 'package:cred/utils/constants.dart';
+import '../../common_components/header.dart';
+import '../manage_account_page/widgets/information_card.dart';
+import './widgets/option_card.dart';
+import '../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class PaymentPage extends StatefulWidget {

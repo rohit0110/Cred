@@ -1,4 +1,4 @@
-import 'package:cred/utils/constants.dart';
+import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class InformationCard extends StatelessWidget {

@@ -1,6 +1,6 @@
-import 'package:cred/common_components/header.dart';
-import 'package:cred/pages/payment_page/widgets/option_card.dart';
-import 'package:cred/utils/constants.dart';
+import '../../common_components/header.dart';
+import '../payment_page/widgets/option_card.dart';
+import '../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatefulWidget {
