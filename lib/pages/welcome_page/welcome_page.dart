@@ -1,6 +1,7 @@
 import './utils/page_indicator.dart';
 import './utils/welcome_card.dart';
-import '../../pages/common_components/outer_button.dart';
+import './../common_components/button/custom_button.dart';
+import '../base_page/base_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -34,7 +35,7 @@ class _WelcomePageState extends State<WelcomePage> {
               height: 330,
               child: PageView(
                 controller: pageController,
-                onPageChanged: (index){
+                onPageChanged: (index) {
                   setState(() {
                     pageNum = index;
                   });
@@ -46,13 +47,24 @@ class _WelcomePageState extends State<WelcomePage> {
                 ],
               ),
             ),
-            const SizedBox(height: 15,),
+            const SizedBox(
+              height: 15,
+            ),
             PageIndicator(controller: pageController),
-            const SizedBox(height: 35,),
-            const OuterButton(disabled: false),
+            const SizedBox(
+              height: 35,
+            ),
+            //Use custom button
+            const CustomButton(
+              buttonSize: ButtonSize.large,
+              buttonActivity: ButtonActivity.initial,
+              buttonState: ButtonState.enabled,
+              title: "Become a member",
+              route: BasePage(),
+            )
           ],
         ),
-      )
+      ),
     );
   }
 }

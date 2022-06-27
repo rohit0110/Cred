@@ -1,6 +1,6 @@
 import '../../utils/constants.dart';
-import '../common_components/outer_button.dart';
-import './components/permission_card.dart';
+import '../../common_components/outer_button.dart';
+import './widgets/permission_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 

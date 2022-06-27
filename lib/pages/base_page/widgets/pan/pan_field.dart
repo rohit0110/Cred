@@ -1,16 +1,15 @@
-import '../../../utils/constants.dart';
+import '../../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
-typedef StringCallback = void Function(String val);
-
-class DOBContainer extends StatefulWidget {
-  const DOBContainer({Key? key, required this.callback}) : super(key: key);
+class PanContainer extends StatefulWidget {
+  const PanContainer({Key? key, required this.callback}) : super(key: key);
   final StringCallback callback;
   @override
-  State<DOBContainer> createState() => _DOBContainerState();
+  State<PanContainer> createState() => _PanContainerState();
 }
 
-class _DOBContainerState extends State<DOBContainer> {
+class _PanContainerState extends State<PanContainer> {
+  final TextEditingController _panController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +19,7 @@ class _DOBContainerState extends State<DOBContainer> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           const Text(
-            "give us your DOB",
+            "finishing up, give us your PAN",
             style: headingStyle,
           ),
           const SizedBox(
@@ -39,21 +38,8 @@ class _DOBContainerState extends State<DOBContainer> {
           ),
           const SizedBox(height: 20),
           TextField(
+            controller: _panController,
             onChanged: (value) {
-              // if (value.length == 10) {
-              //   setState(
-              //     () {
-              //       dobEntered = true;
-              //       widget.callback(value);
-              //     },
-              //   );
-              // } else {
-              //   setState(
-              //     () {
-              //       dobEntered = false;
-              //     },
-              //   );
-              // }
               setState(() {
                 widget.callback(value);
               });
@@ -69,14 +55,14 @@ class _DOBContainerState extends State<DOBContainer> {
               counterText: "",
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
-              hintText: "dd/mm/yyyy",
+              hintText: "enter here",
               hintStyle: TextStyle(
                 color: inputColor,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            keyboardType: TextInputType.datetime,
+            keyboardType: TextInputType.name,
           ),
         ],
       ),

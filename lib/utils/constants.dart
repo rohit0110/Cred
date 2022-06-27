@@ -10,3 +10,5 @@ const TextStyle headingStyle =
     TextStyle(color: headingColor, fontSize: 20, fontWeight: FontWeight.bold);
 const TextStyle subheadingStyle =
     TextStyle(color: subheadingColor, fontSize: 14);
+
+typedef StringCallback = void Function(String val);
