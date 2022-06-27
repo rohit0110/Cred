@@ -1,3 +1,4 @@
+import 'package:cred/pages/manage_account_page/widgets/email_bottom_sheet.dart';
 import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,17 @@ class OptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        if (heading == "email address") {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            builder: (context) {
+              return const EmailBottomSheet();
+            },
+          );
+        }
+      },
       child: Container(
         padding: const EdgeInsets.all(padding),
         child: Row(
