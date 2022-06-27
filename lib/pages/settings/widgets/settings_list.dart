@@ -1,3 +1,4 @@
+import 'package:cred/pages/cred_protect_page/cred_protect_page.dart';
 import 'package:cred/pages/manage_account_page/manage_account_page.dart';
 import 'package:cred/pages/payment_page/payment_page.dart';
 import 'package:cred/pages/settings/widgets/setting_card.dart';
@@ -20,7 +21,7 @@ class SettingsList extends StatelessWidget {
         SettingCard(
           heading: "manage CRED protect",
           subheading: "linked email id's and whatsapp",
-          gotoPage: TransactionHisotryPage(),
+          gotoPage: CredProtectPage(),
         ),
         SettingCard(
           heading: "manage account",
