@@ -4,7 +4,7 @@ import './components/exciting_offers_on_brands.dart';
 import './components/exclusive_cred_cash.dart';
 import './components/offer_with_cred_pay.dart';
 import './components/staycations_for_you.dart';
-import 'explore_button.dart';
+import './components/explore_button.dart';
 import './components/chips_widget.dart';
 import './components/rewards_widget.dart';
 import '../Homepage/components/constants.dart';
