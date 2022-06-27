@@ -1,8 +1,9 @@
-import 'package:cred/pages/cred_protect_page/cred_protect_page.dart';
-import 'package:cred/pages/manage_account_page/manage_account_page.dart';
-import 'package:cred/pages/payment_page/payment_page.dart';
-import 'package:cred/pages/settings/widgets/setting_card.dart';
-import 'package:cred/pages/transaction_history_page/transaction_history_page.dart';
+import '../../about_page/about_page.dart';
+import '../../cred_protect_page/cred_protect_page.dart';
+import '../../manage_account_page/manage_account_page.dart';
+import '../../payment_page/payment_page.dart';
+import './setting_card.dart';
+import '../../transaction_history_page/transaction_history_page.dart';
 import 'package:flutter/material.dart';
 
 class SettingsList extends StatelessWidget {
@@ -46,7 +47,7 @@ class SettingsList extends StatelessWidget {
         SettingCard(
           heading: "about",
           subheading: "",
-          gotoPage: TransactionHisotryPage(),
+          gotoPage: AboutPage(),
         ),
       ],
     );

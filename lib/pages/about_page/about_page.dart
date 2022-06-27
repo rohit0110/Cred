@@ -1,17 +1,16 @@
 import 'package:cred/common_components/header.dart';
-import 'package:cred/pages/manage_account_page/widgets/information_card.dart';
 import 'package:cred/pages/payment_page/widgets/option_card.dart';
 import 'package:cred/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-class PaymentPage extends StatefulWidget {
-  const PaymentPage({Key? key}) : super(key: key);
+class AboutPage extends StatefulWidget {
+  const AboutPage({Key? key}) : super(key: key);
 
   @override
-  State<PaymentPage> createState() => _PaymentPageState();
+  State<AboutPage> createState() => _AboutPageState();
 }
 
-class _PaymentPageState extends State<PaymentPage> {
+class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,15 +28,8 @@ class _PaymentPageState extends State<PaymentPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        "payment settings",
+                        "about",
                         style: headingStyle,
-                      ),
-                      SizedBox(
-                        height: padding / 2,
-                      ),
-                      Text(
-                        "manage your payment method here",
-                        style: subheadingStyle,
                       ),
                     ],
                   ),
@@ -51,21 +43,32 @@ class _PaymentPageState extends State<PaymentPage> {
                 child: Column(
                   children: const [
                     OptionCard(
-                      heading: "manage your upi account",
+                      heading: "terms & conditions",
                       subheading: "",
                     ),
                     OptionCard(
-                      heading: "instant refund",
+                      heading: "privacy policy",
+                      subheading: "",
+                    ),
+                    OptionCard(
+                      heading: "security",
+                      subheading: "",
+                    ),
+                    OptionCard(
+                      heading: "google api disclosure",
+                      subheading: "",
+                    ),
+                    OptionCard(
+                      heading: "open source licenses",
+                      subheading: "",
+                    ),
+                    OptionCard(
+                      heading: "upi faqs & grievances",
                       subheading: "",
                     ),
                   ],
                 ),
               ),
-              const InformationCard(
-                heading:
-                    "your data is 100% secure with us. we don't share any of your informations with any third party.",
-                subheading: "",
-              )
             ],
           ),
         ),
