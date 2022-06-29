@@ -1,4 +1,5 @@
 import 'package:cred/pages/manage_account_page/widgets/email_bottom_sheet.dart';
+import 'package:cred/pages/manage_devices_page/manage_devices_page.dart';
 import '../../../utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,14 @@ class OptionCard extends StatelessWidget {
             builder: (context) {
               return const EmailBottomSheet();
             },
+          );
+        }
+        if (heading == "manage devices") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: ((context) => const ManageDevicesPage()),
+            ),
           );
         }
       },
