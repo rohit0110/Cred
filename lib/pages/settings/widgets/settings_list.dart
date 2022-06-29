@@ -1,3 +1,5 @@
+import 'package:cred/pages/manage_address_page/manage_address_page.dart';
+
 import '../../about_page/about_page.dart';
 import '../../cred_protect_page/cred_protect_page.dart';
 import '../../manage_account_page/manage_account_page.dart';
@@ -37,7 +39,7 @@ class SettingsList extends StatelessWidget {
         SettingCard(
           heading: "manage addresses",
           subheading: "all your addresses are here",
-          gotoPage: TransactionHisotryPage(),
+          gotoPage: ManageAddressPage(),
         ),
         SettingCard(
           heading: "support",
